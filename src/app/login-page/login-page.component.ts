@@ -17,7 +17,9 @@ const STYLES = (_theme: ThemeVariables) => ({
 })
 export class LoginPageComponent implements OnInit {
   readonly classes = this.theme.addStyleSheet(STYLES);
-
+  val: string;
+  favoriteColor = '#ff1744';
+  // @desc use formcontrols and validators for form
   profileForm = new FormGroup({
     username: new FormControl('', [
       Validators.required,
@@ -37,9 +39,8 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  val: string;
-
-  favoriteColor = '#ff1744';
+  
+//@desc  Submit buttton of form
   onSubmit(){
     sessionStorage.setItem("role",this.val)
 

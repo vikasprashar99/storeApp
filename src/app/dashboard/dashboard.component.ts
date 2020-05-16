@@ -28,6 +28,7 @@ export class DashboardComponent implements OnInit {
   storeManagerData=false
 sRole;
 
+// @desc using session storage for storing the selected role
 ngOnInit(): void {
   this.sRole=sessionStorage.getItem("role")
   console.log(this.sRole)
