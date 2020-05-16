@@ -1,0 +1,45 @@
+<div>
+    <ly-toolbar position="static" bg="warn" [elevation]="2">
+        <h6 lyTyp="title" *ngIf="showAdminData">Welcome Admin</h6>
+        <h6 lyTyp="title" *ngIf="receptionistData">Welcome Receptionist</h6>
+        <h6 lyTyp="title" *ngIf="storeManagerData">Welcome StoreManager</h6>
+
+      </ly-toolbar>
+</div><br >
+<div ly-paper *ngIf="showAdminData" bg="background:warn" >
+  <ly-tabs [selectedIndex]="0" [alignTabs]="'center'">
+    <ly-tab>
+      <button ly-tab-label>Receptionist Data</button>
+      <div [withClass]="classes.content" lyTyp="body1">All the Data of the Reception will be shown here</div>
+    </ly-tab>
+    <ly-tab>
+      <button ly-tab-label>Store Manager Data</button>
+      <div [withClass]="classes.content" lyTyp="body1">
+All the data of store will be shown here
+      </div>
+    </ly-tab>
+   
+  </ly-tabs>
+</div>
+
+<div ly-paper bg="background:primary" *ngIf="receptionistData" bg="background:warn" >
+  <ly-tabs [selectedIndex]="0" [alignTabs]="'center'">
+    <ly-tab>
+      <button ly-tab-label> Data</button>
+      <div [withClass]="classes.content" lyTyp="body1">Items Shipped and Delieverd</div>
+    </ly-tab>
+  
+  </ly-tabs>
+</div>
+<div ly-paper bg="background:primary" *ngIf="storeManagerData" bg="background:warn" >
+  <ly-tabs [selectedIndex]="0" [alignTabs]="'center'">
+    
+    <ly-tab>
+      <button ly-tab-label>Store Data</button>
+      <div [withClass]="classes.content" lyTyp="body1">
+        No of items required etc
+      </div>
+    </ly-tab>
+   
+  </ly-tabs>
+</div>
